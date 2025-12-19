@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>یلدا با هوش مصنوعی</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: "Vazir", sans-serif;
+      background: url('https://akasbanoo.ir/personal-profile/myimg/841703059633.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .pomegranate {
+      position: absolute;
+      top: -50px;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #b30000 40%, #800000);
+      border-radius: 50%;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { top: -50px; opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
+    }
+
+    .center-box {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px 30px 60px 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      text-align: right;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+   .center-box img { width: 85px;
+ position: absolute;
+ bottom: -5px;
+ left: 5px;
+ border-radius: 10px; }
+
+    .poem {
+      font-size: 1em;
+      margin-bottom: 10px;
+
+    }
+
+    .translation {
+      font-size: 0.95em;
+      font-style: italic;
+      color: #444;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      padding: 10px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .social-media {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 999;
+    }
+
+    .social-media a {
+      margin: 0 5px;
+    }
+
+    .social-media img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 2px #555);
+    }
+
+    .social-media img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 480px) {
+      .center-box {
+        padding: 15px;
+      }
+      .poem {
+        font-size: 0.95em;
+      }
+      .center-box img {
+        width: 60px;
+      }
+      .footer {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="social-media">
+    <a href="https://instagram.com/ai_rzv" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://t.me/AI_rzv" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+    </a>
+    <a href="https://eitaa.com/ai_rzv" target="_blank">
+      <img src="https://images.seeklogo.com/logo-png/50/2/eitaa-logo-png_seeklogo-503264.png" alt="Eitaa">
+    </a>
+  </div>
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'pomegranate';
+      dot.style.left = Math.random() * window.innerWidth + 'px';
+      dot.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(dot);
+    }
+  </script>
+  <div class="center-box">
+    <div class="poem" id="verse">در حال دریافت فال...</div>
+    <div class="translation" id="meaning"></div>
+    <img src="https://asrturkiye.com/wp-content/uploads/2023/05/%D8%AD%D8%A7%D9%81%D8%B8-min-min-296x300-1.png" alt="حافظ">
+  </div>
+
+  <div class="footer">
+    🎉 خوشحال می‌شیم بهمون ملحق بشی 🎉
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const falList = [
+        {
+          verse: "دل می‌رود ز دستم، صاحب‌دلان خدا را",
+          meaning: "دلت بی‌قرار است و آرامش نداری؛ دعا کن و از اهل دل کمک بگیر.."
+        },
+        {
+          verse: "ز کوی یار می‌آید نسیم باد نوروزی",
+          meaning: "نشانه‌هایی از رسیدن روزهای خوش و دیدار محبوب در راه است."
+        },
+        {
+          verse: "صلاح کار کجا و من خراب کجا؟",
+          meaning: "شرایطت آشفته است، اما امید به بهبود هست؛ صبر کن و راه درست را پیدا کن."
+        },
+        {
+          verse: "به دام زلف تو دل مبتلای خویشتن است",
+          meaning: "دل‌باخته‌ای و راه فراری نداری؛ عشق تو را درگیر کرده است."
+        },
+        {
+          verse: "دوش دیدم که ملائک در میخانه زدند",
+          meaning: "نشانه‌ای از بخشش الهی و پاک شدن دل از گناه؛ امیدت را حفظ کن."
+        },
+        {
+          verse: "هر آن کسی که در این حلقه نیست زنده به عشق",
+          meaning: "بدون عشق، زندگی بی‌روح است؛ عاشق باش و از عشق نترس."
+        },
+        {
+          verse: "چو گل به دامنم افتاد، وقت خوش شد باز",
+          meaning: "فرصت خوبی به‌دستت رسیده؛ قدرش را بدان و از آن بهره ببر."
+        },
+        {
+          verse: "به تماشای تو مشغولم و از کار جهان فارغ",
+          meaning: "محو زیبایی یا هدفی شده‌ای؛ مراقب باش از امور مهم غافل نشوی."
+        },
+        {
+          verse: "بیا تا گل برافشانیم و می در ساغر اندازیم",
+          meaning: "وقت شادی و جشن است؛ غم را کنار بگذار و از لحظه‌ها لذت ببر."
+        },
+        {
+          verse: "در این زمانه رفیقی که خالی از خلل است",
+          meaning: "دوست بی‌عیب پیدا نمی‌شود؛ با گذشت و مهربانی روابطت را حفظ کن."
+        }
+      ];
+
+      const randomIndex = Math.floor(Math.random() * falList.length);
+      const selectedFal = falList[randomIndex];
+
+      document.getElementById("verse").textContent = `«${selectedFal.verse}»`;
+      document.getElementById("meaning").textContent = `تعبیر فال: ${selectedFal.meaning}`;
+    });
+  </script>
+
+</body>
+</html>
